@@ -1,0 +1,89 @@
+body {
+  font-size: 16pt;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  width: 100%;
+  height: 100vh; /* Set body height to 100 viewport height */
+  margin: 0;
+  background-image: linear-gradient(359deg, #3023ae, #eb7f7b);
+}
+
+input,
+button {
+  font: inherit;
+  box-sizing: border-box;
+}
+
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+.App {
+  width: 100%;
+  height: inherit; /* Inherit height from body */
+  display: grid;
+  grid-template-columns: 5% 90% 5%;
+  grid-template-rows: 10% 80% 10%;
+  /* Align content vertically and horizontally within the grid container */
+  align-content: center;
+  justify-content: center;
+}
+
+.App h1:before {
+  content: '💭';
+  margin-right: 0.5em;
+}
+
+.AddThoughtForm {
+  /* grid-column: 2 / 3;
+  grid-row: 2 / 3; */
+  grid-area: 2 / 2 / 3 / 3;
+  display: grid;
+  align-content: start;
+  justify-content: center;
+}
+
+.AddThoughtForm input {
+  padding: 1.5rem;
+  border: 1px solid #666;
+  border-radius: 3px;
+}
+
+.AddThoughtForm input[type='text'] {
+  flex-grow: 1;
+  margin-right: 0.5rem;
+}
+
+.thoughts {
+  /* Remove unnecessary grid styles */
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-rows: 100px;
+  grid-auto-flow: row;
+}
+
+.Thought {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 3px;
+  background-color: #eee;
+}
+
+.Thought .remove-button {
+  font-size: 80%;
+  float: right;
+  border: 0;
+  border-radius: 3px;
+  background: transparent;
+}
+
+.Thought .remove-button:hover {
+  color: #fff;
+  background-color: #000;
+}
